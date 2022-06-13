@@ -9,12 +9,13 @@
 }
 
 @media screen and (max-width: 768px)  {  /*tablette*/
-    menu, nav, header, .info, .centre {
+    .menu
+    , header, .info, .centre {
         flex-direction: column;
     }
 
     .miniatureGraphe{
-        width: fit-content;
+        width: 50vw;
     }
 
     .info {
@@ -26,18 +27,34 @@
         text-align: center;
     }
 
-    .centre {
+    .centre, nav {
         width: 100vw;
     }
+
+    nav a {
+        width: 20vw;
+    }
+
 }
 
-@media screen and (min-width: 767px)  {  /*ordi*/
-    .centre {
+@media screen and (min-width: 769px)  {  /*ordi*/
+    .centre, header, .menu
+     {
         flex-direction: row;
     }
 
     .miniatureGraphe {
         width: 15vw;
+    }
+
+    nav a:hover, .boutonGraphe:hover, .info a:hover {
+        background-color: #ecedd44b;
+
+    }
+
+    .miniatureGraphe:hover {
+        background-color: #eeefe2;
+        transition: all 0.2s ease-out;
     }
 }
 
@@ -98,15 +115,14 @@ header {
     width: 100%;
     min-height: 15vh;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     position: fixed;
     flex-wrap: wrap;
 }
 
 .containerLogoNom, nav{
-    display: flex;
     flex-direction: row;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -133,7 +149,6 @@ nav a, .boutonGraphe {
     text-align: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2vw;
     min-width: 6vw;
     min-height: 3.5vh;
     justify-content: center;
@@ -141,6 +156,12 @@ nav a, .boutonGraphe {
     align-items: center;
     top: 5vh;
     font-family: font1B;
+}
+
+.liens a {
+    min-width: fit-content;
+    min-height: fit-content;
+    border-radius: 90px;
 }
 
 .boutonGraphe {
@@ -151,19 +172,13 @@ nav a, .boutonGraphe {
     align-items: center;
 }
 
-nav a:hover, .boutonGraphe:hover {
-    background-color: #ecedd44b;
-    transition: all 0.2s ease-out;
-}
-
-
 .espaceHeader {
     height: 15vh;
 }
 
-menu {
+.menu
+ {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     min-height: 75vh;
@@ -175,7 +190,8 @@ menu {
     margin: 5vh;
 }
 
-menu .texte1 {
+.menu
+ .texte1 {
     width: 40vw;
     color: #ecedd4;
     font-family:  Arial, Helvetica, sans-serif;
@@ -225,10 +241,6 @@ menu .texte1 {
     width: auto;
 }
 
-.miniatureGraphe:hover {
-    background-color: #eeefe2;
-}
-
 .info {
     display: flex;
     justify-content: space-around;
@@ -242,11 +254,9 @@ menu .texte1 {
 }
 
 .info a {
-    padding: 2vw;
+    padding: 0.5w;
     text-decoration: none;
 }
 
-.info a:hover {
-    color: #eeefe295;
-}
+
 
