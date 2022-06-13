@@ -1,0 +1,252 @@
+@font-face {
+    font-family: font1;
+    src: url(data/champagne_limousines/Champagne\ &\ Limousines.ttf);
+}
+
+@font-face {
+    font-family: font1B;
+    src: url(data/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf);
+}
+
+@media screen and (max-width: 768px)  {  /*tablette*/
+    menu, nav, header, .info, .centre {
+        flex-direction: column;
+    }
+
+    .miniatureGraphe{
+        width: fit-content;
+    }
+
+    .info {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info p {
+        text-align: center;
+    }
+
+    .centre {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 767px)  {  /*ordi*/
+    .centre {
+        flex-direction: row;
+    }
+
+    .miniatureGraphe {
+        width: 15vw;
+    }
+}
+
+.haut {
+    background-color: #204116;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separation, .separation2 {
+    background-color: #ecedd4;
+    width: 100%;
+    height: 20vh;
+    background-image: url(data/vagueSeparation.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.separation {
+    background-image: url(data/vagueSeparation.svg);
+}
+
+.separation2 {
+    background-image: url(data/vagueSeparation2.svg);
+}
+
+.bas {
+    background-color: #ecedd4;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: #204116;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+html, body, main {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: fixed;
+    flex-wrap: wrap;
+}
+
+.containerLogoNom, nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 6vh;
+    width: auto;
+    margin-right: 2vw;
+}
+
+header h1 {
+    color: #ecedd4;
+    font-family: font1;
+}
+
+nav a, .boutonGraphe {
+    display: flex;
+    background-color: rgb(100, 125, 85);
+    color: #204116;
+    text-decoration: none;
+    border-radius: 90px;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+    min-width: 6vw;
+    min-height: 3.5vh;
+    justify-content: center;
+    margin: 5px;
+    align-items: center;
+    top: 5vh;
+    font-family: font1B;
+}
+
+.boutonGraphe {
+    background-color: #ecedd4;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover, .boutonGraphe:hover {
+    background-color: #ecedd44b;
+    transition: all 0.2s ease-out;
+}
+
+
+.espaceHeader {
+    height: 15vh;
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    flex-wrap: wrap;
+}
+
+.image1 img {
+    width : 30vw;
+    margin: 5vh;
+}
+
+menu .texte1 {
+    width: 40vw;
+    color: #ecedd4;
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: font1;
+}
+
+.texte1 h1 {
+    font-size: xxx-large;
+}
+
+.texte1 p {
+    font-size: x-large;
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.miniatureGraphe {
+    min-height: 35vh;
+    background-color: #fffff2;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #204116;
+    font-family: font1B;
+    text-align: center;
+}
+
+.miniatureGraphe img {
+    max-height: 20vh;
+    width: auto;
+}
+
+.miniatureGraphe:hover {
+    background-color: #eeefe2;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    width: 100%;
+}
+
+.info p, .info a {
+    color: #eeefe2;
+    font-family: font1B;
+}
+
+.info a {
+    padding: 2vw;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: #eeefe295;
+}
+
