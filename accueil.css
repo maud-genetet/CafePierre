@@ -1,16 +1,5 @@
-@font-face {
-    font-family: font1;
-    src: url(data/champagne_limousines/Champagne\ &\ Limousines.ttf);
-}
-
-@font-face {
-    font-family: font1B;
-    src: url(data/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf);
-}
-
 @media screen and (max-width: 768px)  {  /*tablette*/
-    .menu
-    , header, .info, .centre {
+    .menu, .centre {
         flex-direction: column;
     }
 
@@ -18,27 +7,13 @@
         width: 50vw;
     }
 
-    .info {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .info p {
-        text-align: center;
-    }
-
-    .centre, nav {
+    .centre {
         width: 100vw;
     }
-
-    nav a {
-        width: 20vw;
-    }
-
 }
 
 @media screen and (min-width: 769px)  {  /*ordi*/
-    .centre, header, .menu
+    .centre, .menu
      {
         flex-direction: row;
     }
@@ -47,7 +22,7 @@
         width: 15vw;
     }
 
-    nav a:hover, .boutonGraphe:hover, .info a:hover {
+    .boutonGraphe:hover {
         background-color: #ecedd44b;
 
     }
@@ -68,23 +43,6 @@
     align-items: center;
 }
 
-.separation, .separation2 {
-    background-color: #ecedd4;
-    width: 100%;
-    height: 20vh;
-    background-image: url(data/vagueSeparation.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.separation {
-    background-image: url(data/vagueSeparation.svg);
-}
-
-.separation2 {
-    background-image: url(data/vagueSeparation2.svg);
-}
-
 .bas {
     background-color: #ecedd4;
     width: 100%;
@@ -94,52 +52,13 @@
     align-items: center;
 }
 
-footer {
-    width: 100%;
+.separation {
     height: 20vh;
-    background-color: #204116;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-image: url(data/vagueSeparation.svg);
+    background-size: cover;
 }
 
-html, body, main {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-header {
-    width: 100%;
-    min-height: 15vh;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    flex-wrap: wrap;
-}
-
-.containerLogoNom, nav{
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.logo img {
-    height: 6vh;
-    width: auto;
-    margin-right: 2vw;
-}
-
-header h1 {
-    color: #ecedd4;
-    font-family: font1;
-}
-
-nav a, .boutonGraphe {
+.boutonGraphe {
     display: flex;
     background-color: rgb(100, 125, 85);
     color: #204116;
@@ -158,10 +77,8 @@ nav a, .boutonGraphe {
     font-family: font1B;
 }
 
-.liens a {
-    min-width: fit-content;
-    min-height: fit-content;
-    border-radius: 90px;
+#header {
+    background: none;
 }
 
 .boutonGraphe {
@@ -170,10 +87,6 @@ nav a, .boutonGraphe {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.espaceHeader {
-    height: 15vh;
 }
 
 .menu
@@ -190,8 +103,7 @@ nav a, .boutonGraphe {
     margin: 5vh;
 }
 
-.menu
- .texte1 {
+.menu .texte1 {
     width: 40vw;
     color: #ecedd4;
     font-family:  Arial, Helvetica, sans-serif;
@@ -239,23 +151,6 @@ nav a, .boutonGraphe {
 .miniatureGraphe img {
     max-height: 20vh;
     width: auto;
-}
-
-.info {
-    display: flex;
-    justify-content: space-around;
-    height: auto;
-    width: 100%;
-}
-
-.info p, .info a {
-    color: #eeefe2;
-    font-family: font1B;
-}
-
-.info a {
-    padding: 0.5w;
-    text-decoration: none;
 }
 
 
