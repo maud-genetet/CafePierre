@@ -25,6 +25,14 @@
     }
 }
 
+#header {
+    display: flex;
+}
+
+#nav {
+    display: flex;
+}
+
 header {
     width: 100%;
     min-height: 15vh;
