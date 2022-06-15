@@ -5,45 +5,41 @@ import dash_html_components as html
 from dash.dependencies import Output, Input
 import pandas as pd
 import plotly.express as px
+import sqlite3 as sql
 
-df = pd.read_csv('./bd/GreenhouseGasWorld.csv', sep=';')
-
+conn = sql.connect('./bd/DB.db')
 # Pivot
-df = df.iloc[1:,:]
-df.columns = ['Year', 'GHG']
-df = df[df.Year >= "1992-00-00"]   
-df["Year"] = df["Year"].str[0:4]
-df["Year"] = df["Year"].astype(int)
-df["GHG"] = df["GHG"].str.replace(',', '.')
-df["GHG"] = df["GHG"].astype(float)
-df.fillna(0, inplace=True)
-df.reset_index(drop=False, inplace=True )
-print(df.head())
+# ['countryCode', 'Year', 'GDP', 'Population', 'CarbonFootprint', 'GHG']
+df = pd.read_sql_query("SELECT countryCode, population, Year FROM CountryInformations", conn)
+
 
 app = JupyterDash(__name__)
 
 app.layout = html.Div([
     html.H2('Dash Application'),
-    html.H1('Sea Level Rise'),
-    dcc.Dropdown(id='year_dropdown',
-                 value=2016,
+    html.H1('Population Evolution (1992 - 2020)'),
+    dcc.Dropdown(id='Country_dropdown',
+                 value=df['countryCode'].values[0], 
                  options=[{'label': year, 'value': year}
-                          for year in list(df["Year"].unique())]),
-    dcc.Graph(id='GreenHouseGas'),
+                          for year in list(df['countryCode'].unique())]),
+    dcc.Graph(id='PopEvolution'),
 ])
 
-@app.callback(Output('GreenHouseGas', 'figure'),
-              Input('year_dropdown', 'value'))
+@app.callback(Output('PopEvolution', 'figure'),
+              Input('Country_dropdown', 'value'))
 def plot_teams_total(year):
+    df_year = df[df['countryCode'] == year]
+    print(df_year)
+    print(df['Population'].unique())
     fig = px.line(
-        df,
+        df_year,
         x='Year',
-        y='GHG',
-        height=200 + 15*15,
-        title= f'Greenhouse Gas - {year} ',
+        y='Population',
+        height=200 + 50 * len(df['countryCode'].unique()),
+        title= f'Population - {year} ',
     )
-    fig.update_layout(yaxis_categoryorder='total ascending')
     return fig
 
 if __name__ == '__main__':
     app.run_server(mode="inline", debug=True)
+    pass
