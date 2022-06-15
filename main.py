@@ -8,7 +8,7 @@ import plotly.express as px
 import sqlite3 as sql
 
 conn = sql.connect('./bd/DB.db')
-# Pivot
+
 # ['countryCode', 'Year', 'GDP', 'Population', 'CarbonFootprint', 'GHG']
 df = pd.read_sql_query("SELECT countryCode, population, Year FROM CountryInformations", conn)
 
@@ -29,8 +29,6 @@ app.layout = html.Div([
               Input('Country_dropdown', 'value'))
 def plot_teams_total(year):
     df_year = df[df['countryCode'] == year]
-    print(df_year)
-    print(df['Population'].unique())
     fig = px.line(
         df_year,
         x='Year',
