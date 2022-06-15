@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="css/pageGraphe.css">
     <link rel="stylesheet" href="css/graphe.css">
 
-    <title>CaféPierre : Graphes </title>
+    <title>CaféPierre : Graphes Energies</title>
     <meta name="viewport" content="width=device-width"/>
 </head>
 <body>
     <header id="header">
-      <div class="containerLogoNom">
+        <div class="containerLogoNom">
             <div class="logo">
                 <img src="data/logoCafe.svg" alt="logo">
             </div>
@@ -23,7 +23,14 @@
         </div>
         <nav id="nav">
             <a href="index.html">Accueil</a>
-            <a href="#">Graphes</a>
+            <a href="CO2.html">CO2</a>
+            <a href="temperature.html">Température</a>
+            <a href="Ocean.html">Niveau de l'océan</a>
+            <a href="energie.html">Energie</a>
+            <a href="PIB.html">PIB</a>
+            <a href="empreinte.html">Empreinte</a>
+            <a href="population.html">Population</a>
+            <a href="industries.html">Secteurs</a>
         </nav>
     </header>
     <div class="separation"></div>
@@ -31,7 +38,7 @@
         <div class="espaceHeader"></div>
         <div class="page">
             <div class="graphe">
-                <h1>Evolution PIB selon le temps</h1>
+                <h1>Evolution de la consommation d'énergies première</h1>
                 <div>
                     <label for="pays-select">Pays:</label>
 
@@ -45,27 +52,49 @@
                         <option value="USA">USA</option>
                         <option value="WLD">WLD</option>
                     </select>
-                    <img id="img-1" src="plot/GDP_H_'CHN'.png" alt="PIB">
+                    <img id="img-1" src="plot/primaryEnergyConsumption'CHN'.png" alt="consoEnergie">
                 </div>
-                <p>Le produit intérieur brut (PIB) est l'indicateur économique qui permet de quantifier la valeur totale de la « production de richesse » annuelle effectuée par les agents économiques (ménages, entreprises, administrations publiques) résidant à l'intérieur d'un territoire.</p>
+                <p>En 2020, la consommation brute d’énergie dans l’industrie baisse de 9 % et s’établit à 32,2 millions de tonnes d’équivalent pétrole. La baisse de consommation énergétique est plus faible que la baisse d’activité enregistrée dans l’industrie en 2020 (− 12 %). 40 % des établissements industriels indiquent que leur consommation d’au moins une énergie a baissé en raison de la crise sanitaire, tandis que 3 % des établissements estiment avoir augmenté la consommation d’au moins une énergie.</p>
             </div>
 
             <div class="graphe">
-                <h1>Evolution Secteurs</h1>
+                <h1>Evolution de la production d'énergies première</h1>
                 <div>
-                    <label for="secteur-select">Pays:</label>
+                    <label for="pays2-select">Pays:</label>
+
+                    <select id="pays2-select">
+                        <option value="CHN">Chine</option>
+                        <option value="CIV">CIV</option>
+                        <option value="DEU">Allemagne</option>
+                        <option value="DNK">DNK</option>
+                        <option value="FRA">France</option>
+                        <option value="IND">Inde</option>
+                        <option value="USA">USA</option>
+                        <option value="WLD">WLD</option>
+                    </select>
+                    <img id="img-2" src="plot/primaryEnergyProduction'CHN'.png" alt="prodEnergie">
+                </div>
+                <p>Jusqu’au milieu du 20e siècle, l’Homme produisait son énergie uniquement à partir de la combustion de roches fossiles. Puis, il développa l’énergie nucléaire.<br>
+                    Aujourd’hui, il met au point de nouvelles formes d’énergies utilisant la dynamique des enveloppes fluides (air et eau) générée par le Soleil et la combustion de la biomasse.</p>
+            </div>
+
+            <div class="graphe">
+                <h1>Evolution de la production d'énergies première</h1>
+                <div>
+                    <label for="secteur-select">Secteur:</label>
 
                     <select id="secteur-select">
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="CommercialAndPublicServices">Commerce and services public</option>
-                        <option value="Industry">Industriel</option>
-                        <option value="Other">Other</option>
-                        <option value="Residential">Residentiel</option>
-                        <option value="Transport">Transport</option>
+                        <option value="Biomass_and_Waste">Biomass and Waste</option>
+                        <option value="Coal">Coal</option>
+                        <option value="Crude_Oil">Crude Oil</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Gas">Gas</option>
+                        <option value="Geothermal">Geothermal</option>
+                        <option value="Heat">Heat</option>
+                        <option value="OilProducts">Oil Products</option>
                     </select>
-                    <img id="img-2" src="plot/Evolution_Agriculture.png" alt="secteur">
+                    <img id="img-3" src="plot/ProductionOfEnergyWithTheSourceBiomass_and_Waste.png" alt="prodEnergie">
                 </div>
-                <p>Un secteur économique, secteur d'activité ou secteur d'activité économique est un ensemble d’activité économique, ayant des traits similaires.</p>
             </div>
 
 
@@ -77,10 +106,18 @@
             <p>© 2022 | Genetet, Kerchaoui, Lamat, Lebez, Panteix</p>
             <div>
                 <a href="index.html">Accueil</a>
-                <a href="#">Nos Graphes</a>
+                <a href="index.html">Accueil</a>
+                <a href="CO2.html">CO2</a>
+                <a href="temperature.html">Température</a>
+                <a href="Ocean.html">Niveau de l'océan</a>
+                <a href="energie.html">Energie</a>
+                <a href="PIB.html">PIB</a>
+                <a href="empreinte.html">Empreinte</a>
+                <a href="population.html">Population</a>
+                <a href="industries.html">Secteurs</a>
             </div>
         </div>
     </footer>
-    <script src="js/graphePIB.js"></script>
+    <script src="js/grapheEnergie.js"></script>
 </body>
 </html>

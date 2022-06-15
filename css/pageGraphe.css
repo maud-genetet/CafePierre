@@ -1,13 +1,13 @@
 .page {
     background-color: #ecedd4;
-    min-height: 100vh;
+    min-height: 40vh;
 }
 
 .separation {
     top: 15vh;
     left: 0;
     position: fixed;
-    background-image: url(data/vagueSeparation3.svg);
+    background-image: url(./../data/vagueSeparation3.svg);
     background-size: cover;
     background-repeat: repeat-x;
     width: 100vw;

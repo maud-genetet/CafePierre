@@ -54,7 +54,7 @@
 
 .separation {
     height: 20vh;
-    background-image: url(data/vagueSeparation.svg);
+    background-image: url(./../data/vagueSeparation.svg);
     background-size: cover;
 }
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/pageGraphe.css">
     <link rel="stylesheet" href="css/graphe.css">
 
-    <title>CaféPierre : Graphes Ocean</title>
+    <title>CaféPierre : Graphes Emission</title>
     <meta name="viewport" content="width=device-width"/>
 </head>
 <body>
@@ -38,13 +38,29 @@
         <div class="espaceHeader"></div>
         <div class="page">
             <div class="graphe">
-                <h1>Niveau des Océans</h1>
+                <h1>Empreinte gas à effet de serre selon le temps</h1>
                 <div>
-                    
-                    <img id="img-1" src="plot/SeaLevel.png" alt="SeaLevel">
+                    <label for="pays-select">Pays:</label>
+
+                    <select name="pays" id="pays-select">
+                        <option value="CHN">Chine</option>
+                        <option value="CIV">CIV</option>
+                        <option value="DEU">Allemagne</option>
+                        <option value="DNK">DNK</option>
+                        <option value="FRA">France</option>
+                        <option value="IND">Inde</option>
+                        <option value="USA">USA</option>
+                    </select>
+                    <img id="img-1" src="plot/GHG'CHN'.png" alt="GHG">
                 </div>
-                <p>L'élévation du niveau de la mer est un phénomène enclenché au cours du XXᵉ siècle et résultant du réchauffement climatique. Le niveau moyen des océans a augmenté de 20 cm entre 1901 et 2018, et le rythme s'accélère, s'établissant, vers 2020, à plus de 3,5 mm par an</p>
+                <p>L’empreinte carbone est un indicateur qui mesure la quantité de gaz à effet de serre relâchée dans l'atmosphère par une activité. Elle permet ainsi d’évaluer l’impact des activités humaines sur l’environnement. Mesurer son impact environnemental est la première étape avant d'agir contre le réchauffement climatique.</p>
             </div>
+
+            <div class="graphe">
+                <h1>Empreinte gas à effet de serre Mondiale</h1>
+                <img src="plot/GreenhouseGas.png" alt="GreenhouseGas">
+            </div>
+
 
         </div>
         <div class="separation2"></div>
@@ -66,5 +82,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/grapheEmpreinte.js"></script>
 </body>
 </html>

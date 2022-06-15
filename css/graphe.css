@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5vw;
+    margin-top: 5vh;
 }
 
 .graphe p {
@@ -25,4 +25,8 @@
 .graphe div {
     display: flex;
     flex-direction: column;
+}
+
+img {
+    width: auto;
 }
