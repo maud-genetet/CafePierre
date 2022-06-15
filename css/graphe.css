@@ -1,0 +1,28 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphe p, .graphe h1, .graphe label, .graphe select {
+    font-family: font1B;
+}
+
+.graphe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vw;
+}
+
+.graphe p {
+    width: 50vw;
+    text-align: left;
+}
+
+.graphe div {
+    display: flex;
+    flex-direction: column;
+}

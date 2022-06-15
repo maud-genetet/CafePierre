@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/pageGraphe.css">
     <link rel="stylesheet" href="css/graphe.css">
 
-    <title>CaféPierre : Graphes CO2</title>
+    <title>CaféPierre : Graphes </title>
     <meta name="viewport" content="width=device-width"/>
 </head>
 <body>
@@ -23,7 +23,7 @@
         </div>
         <nav id="nav">
             <a href="index.html">Accueil</a>
-            <a href="#graphes">Graphes</a>
+            <a href="#">Graphes</a>
         </nav>
     </header>
     <div class="separation"></div>
@@ -31,7 +31,7 @@
         <div class="espaceHeader"></div>
         <div class="page">
             <div class="graphe">
-                <h1>Empreinte carbonne selon le temps</h1>
+                <h1>Evolution PIB selon le temps</h1>
                 <div>
                     <label for="pays-select">Pays:</label>
 
@@ -43,10 +43,29 @@
                         <option value="FRA">France</option>
                         <option value="IND">Inde</option>
                         <option value="USA">USA</option>
+                        <option value="WLD">WLD</option>
                     </select>
-                    <img id="img-1" src="plot/CarbonFootprint'CHN'.png" alt="CarbonFootprint">
+                    <img id="img-1" src="plot/GDP_H_'CHN'.png" alt="PIB">
                 </div>
-                <p>L’empreinte carbone est un indicateur qui mesure la quantité de gaz à effet de serre relâchée dans l'atmosphère par une activité. Elle permet ainsi d’évaluer l’impact des activités humaines sur l’environnement. Mesurer son impact environnemental est la première étape avant d'agir contre le réchauffement climatique.</p>
+                <p>Le produit intérieur brut (PIB) est l'indicateur économique qui permet de quantifier la valeur totale de la « production de richesse » annuelle effectuée par les agents économiques (ménages, entreprises, administrations publiques) résidant à l'intérieur d'un territoire.</p>
+            </div>
+
+            <div class="graphe">
+                <h1>Evolution Secteurs</h1>
+                <div>
+                    <label for="secteur-select">Pays:</label>
+
+                    <select id="secteur-select">
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="CommercialAndPublicServices">Commerce and services public</option>
+                        <option value="Industry">Industriel</option>
+                        <option value="Other">Other</option>
+                        <option value="Residential">Residentiel</option>
+                        <option value="Transport">Transport</option>
+                    </select>
+                    <img id="img-2" src="plot/Evolution_Agriculture.png" alt="secteur">
+                </div>
+                <p>Un secteur économique, secteur d'activité ou secteur d'activité économique est un ensemble d’activité économique, ayant des traits similaires.</p>
             </div>
 
 
@@ -62,6 +81,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/grapheCO2.js"></script>
+    <script src="js/graphePIB.js"></script>
 </body>
 </html>

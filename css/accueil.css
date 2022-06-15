@@ -1,0 +1,157 @@
+@media screen and (max-width: 768px)  {  /*tablette*/
+    .menu, .centre {
+        flex-direction: column;
+    }
+
+    .miniatureGraphe{
+        width: 50vw;
+    }
+
+    .centre {
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width: 769px)  {  /*ordi*/
+    .centre, .menu
+     {
+        flex-direction: row;
+    }
+
+    .miniatureGraphe {
+        width: 15vw;
+    }
+
+    .boutonGraphe:hover {
+        background-color: #ecedd44b;
+
+    }
+
+    .miniatureGraphe:hover {
+        background-color: #eeefe2;
+        transition: all 0.2s ease-out;
+    }
+}
+
+.haut {
+    background-color: #204116;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bas {
+    background-color: #ecedd4;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separation {
+    height: 20vh;
+    background-image: url(data/vagueSeparation.svg);
+    background-size: cover;
+}
+
+.boutonGraphe {
+    display: flex;
+    background-color: rgb(100, 125, 85);
+    color: #204116;
+    text-decoration: none;
+    border-radius: 90px;
+    padding: 5px 10px;
+    text-align: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 6vw;
+    min-height: 3.5vh;
+    justify-content: center;
+    margin: 5px;
+    align-items: center;
+    top: 5vh;
+    font-family: font1B;
+}
+
+#header {
+    background: none;
+}
+
+.boutonGraphe {
+    background-color: #ecedd4;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    flex-wrap: wrap;
+}
+
+.image1 img {
+    width : 30vw;
+    margin: 5vh;
+}
+
+.menu .texte1 {
+    width: 40vw;
+    color: #ecedd4;
+    font-family:  Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: font1;
+}
+
+.texte1 h1 {
+    font-size: xxx-large;
+}
+
+.texte1 p {
+    font-size: x-large;
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.miniatureGraphe {
+    min-height: 35vh;
+    background-color: #fffff2;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #204116;
+    font-family: font1B;
+    text-align: center;
+}
+
+.miniatureGraphe img {
+    max-height: 20vh;
+    width: auto;
+}
+
+
+

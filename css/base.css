@@ -1,0 +1,16 @@
+html, body, main {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: font1;
+    src: url(data/champagne_limousines/Champagne\ &\ Limousines.ttf);
+}
+
+@font-face {
+    font-family: font1B;
+    src: url(data/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf);
+}
