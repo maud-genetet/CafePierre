@@ -15,9 +15,8 @@
 .separation {
     top: 15vh;
     left: 0;
-    background-image: url(./../data/vagueSeparation3.svg);
+    background-image: url(./../image/vagueSeparation3.svg);
     background-size: cover;
     background-repeat: repeat-x;
-    width: 100vw;
     height: 5vh;
 }

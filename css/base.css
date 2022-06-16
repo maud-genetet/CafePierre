@@ -7,10 +7,10 @@ html, body, main {
 
 @font-face {
     font-family: font1;
-    src: url(./../data/champagne_limousines/Champagne\ &\ Limousines.ttf);
+    src: url(./../image/champagne_limousines/Champagne\ &\ Limousines.ttf);
 }
 
 @font-face {
     font-family: font1B;
-    src: url(./../data/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf);
+    src: url(./../image/champagne_limousines/Champagne\ &\ Limousines\ Bold.ttf);
 }
