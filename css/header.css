@@ -34,16 +34,6 @@
     flex-wrap: wrap;
 }
 
-header {
-    width: 100%;
-    min-height: 15vh;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    flex-wrap: wrap;
-    background-color: #204116;
-}
-
 .separation {
     background-color: #ecedd4;
     width: 100%;
