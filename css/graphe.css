@@ -9,6 +9,10 @@
     font-family: font1B;
 }
 
+.graphe h1 {
+    text-align: center;
+}
+
 .graphe {
     display: flex;
     flex-direction: column;
